@@ -13,6 +13,10 @@ var diceScore = player1DiceScore;
 var playerScore = player1Score;
 var winnerAnnouce = document.querySelector('.winnerAnnouce');
 var overlay = document.querySelector('.overlay')
+var activeClass = document.querySelector('.activeClass')
+var activeClass2 = document.querySelector('.activeClass2')
+activeClass.classList.remove('activeClass');
+
 
 
 function changeBg() {
@@ -60,11 +64,16 @@ function playerMoving() {
         activePlayer = player2;
         activePlayer.classList.add('active');
         player1.classList.remove('active');
+        activeClass2.classList.remove('activeClass2');
+        activeClass.classList.add('activeClass');
+        
         changeBg();
     } else if (activePlayer == player2) {
         activePlayer = player1;
         activePlayer.classList.add('active');
         player2.classList.remove('active');
+        activeClass.classList.remove('activeClass');
+        activeClass2.classList.add('activeClass2');
 
     }
     playerActivation();

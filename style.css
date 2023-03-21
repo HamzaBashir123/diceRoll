@@ -6,25 +6,31 @@
 
 body {
     min-height: 100vh;
-    background-image: linear-gradient(135deg, #b3282f, #6d3073);
+    background-image: linear-gradient(135deg, #33ccff, #ff99cc);
     font-family: 'Tilt Neon', cursive;
+    display: flex;
+    align-items: center;
 }
 
 .mainBox {
     height: 600px;
     width: 800px;
-    margin: 130px auto 0 auto;
-    background-color: #d6a2ae;
+    background-color: #93ccdf;
     border-radius: 10px;
     position: relative;
 }
 
 .active {
-    background-color: #b26e87;
+    background-color: #ff99cc;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-
+.activeClass{
+     display: none;
+}
+.activeClass2{
+    display: none;
+}
 .hidden {
     display: none;
 }
@@ -38,14 +44,15 @@ body {
 }
 
 .bTns {
-    border: 2px solid rgb(255, 0, 0);
+    transition: 1s ease-in-out;
+    background-image: linear-gradient(to left, #33ccff, #ff99cc);
     border-radius: 50px;
     font-size: 16px;
     padding: 5px 10px;
 }
 
 .diceScore {
-    background-color: #bf2e57;
+    background-color: #93ccdf;
     width: 150px;
     padding: 10px;
     border-radius: 10px;
